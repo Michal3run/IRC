@@ -1,0 +1,9 @@
+Instrukcja:
+
+Uruchamiamy serwer, wpisuj¹c w konsolê: ./serwer <numer_portu>
+
+Nastêpnie uruchamiamy projekt IRC( i kompilujemy), lub aplikacjê IRC.exe.
+
+W okienku wpisujemy nasz nick, adres ip komputera na którym uruchomiony jest serwer, oraz numer portu.
+
+Teraz mo¿na wysy³aæ i otrzymywaæ wiadomoœci, oraz tworzyæ nowe pokoje.

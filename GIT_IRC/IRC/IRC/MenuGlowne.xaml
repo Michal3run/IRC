@@ -1,0 +1,64 @@
+﻿<Window x:Class="IRC.MenuGlowne"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="IRC CLIENT - MENU" Height="469.426" Width="693.324" Background="Black">
+    <Grid Margin="0,0,-6,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="683*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Image Margin="0,-11,418,358" Source="logo_lepsze.png" Stretch="Fill"/>
+        <Button x:Name="Wyslij" Content="Wyślij" HorizontalAlignment="Left" Margin="426,386,0,0" VerticalAlignment="Top" Width="107" Background="#FF1753A1" Height="25" FontFamily="Arial" FontWeight="Bold" Click="Wyslij_Click" FontSize="13" IsDefault="True"/>
+        <Label x:Name="tlo" HorizontalAlignment="Left" Margin="292,96,0,0" VerticalAlignment="Top" Foreground="White" Background="White" Height="275" Width="368">
+
+            <StackPanel Name="ChatPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="218" Width="358" Background="Black">
+
+                <TextBox Name="Chat" Text="{Binding  ChatText}" Focusable="False" Foreground="White"  Background="Black"  FontFamily="Arial" Height="221" Margin="0,-2,0,-1" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
+
+            </StackPanel>
+
+
+        </Label>
+        <TextBox x:Name="Message" HorizontalAlignment="Left" Height="46" Margin="296,322,0,0" TextWrapping="Wrap" Text="Tu wpisz swoją wiadomość..." GotFocus="Message_GotFocus" VerticalAlignment="Top" Width="360" Background="Black" Foreground="White" SelectionBrush="#FF1482F0" FontFamily="Arial" AllowDrop="True"/>
+        <Border x:Name="ChannelsBorder" BorderBrush="White" BorderThickness="3" HorizontalAlignment="Left" Height="258" Margin="24,98,0,0" VerticalAlignment="Top" Width="230" Background="White">
+            <ListBox x:Name="Channels" Background="Black" BorderBrush="White" Foreground="White" HorizontalContentAlignment="Stretch" PreviewMouseLeftButtonDown="Channels_PreviewMouseDown" Margin="-1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="35" />
+                                <ColumnDefinition Width="33" />
+                                <ColumnDefinition Width="33" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Name}" Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="13"/>
+                            <TextBlock Grid.Column="1" Text="{Binding Occupancy}"  Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="13"/>
+                            <TextBlock Grid.Column="2" Text="{Binding IsInside}"  Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="13"/>
+                            <TextBlock Grid.Column="3" Text="{Binding NewMessages}"  Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="13"/>
+
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+        <Button x:Name="ExitServer" Content="Wyjdź z serwera" HorizontalAlignment="Left" Margin="82,401,0,0" VerticalAlignment="Top" Width="107" Background="#FFA11717" Height="25" FontFamily="Arial" FontWeight="Bold" FontSize="13" Click="ExitServer_Click"/>
+        <Button Content="Dodaj kanał" HorizontalAlignment="Left" Margin="24,369,0,0" VerticalAlignment="Top" Width="106" Height="25" Background="#FF1753A1" FontFamily="Arial" FontSize="13" FontWeight="Bold" Click="Button_Click"/>
+        <Label Content="Nazwa kanału" HorizontalAlignment="Left" Margin="22,71,0,0" VerticalAlignment="Top" Width="92" Foreground="White" FontSize="12" FontFamily="Arial" FontWeight="Bold" Height="24"/>
+        <Label Content="   Max &#xD;&#xA; osób" HorizontalAlignment="Left" Margin="114,60,0,0" VerticalAlignment="Top" Width="60" Foreground="White" FontSize="12" FontFamily="Arial" FontWeight="Bold" BorderBrush="White" Height="38"/>
+        <Label Content="Czy na&#xD;&#xA;kanale?" HorizontalAlignment="Left" Margin="162,60,0,0" VerticalAlignment="Top" Width="64" Foreground="White" FontSize="12" FontFamily="Arial" FontWeight="Bold" Height="38"/>
+        <Label Content="   Coś&#xD;&#xA;nowego?" HorizontalAlignment="Left" Margin="213,60,0,0" VerticalAlignment="Top" Width="64" Foreground="White" FontSize="12" FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="0.453,1" Height="38"/>
+
+        <TextBlock x:Name="RoomNameBlock" HorizontalAlignment="Left" TextAlignment="Center" Margin="305,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Height="16" Foreground="White" Background="Black" Text="" FontFamily="Arial" FontSize="14" FontWeight="Bold"/>
+        <TextBlock x:Name="RoomNameBlock0" HorizontalAlignment="Left" Margin="324,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="16" Foreground="White" Background="Black" FontFamily="Arial" FontWeight="Bold" FontSize="13"><Run Language="pl-pl" Text="Aktualny kanał"/></TextBlock>
+        <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="47" Margin="292,33,0,0" VerticalAlignment="Top" Width="163" RenderTransformOrigin="0.57,0.553"/>
+        <Button x:Name="ExitRoom" Content="Wyjdź z kanału" HorizontalAlignment="Left" Margin="138,369,0,0" VerticalAlignment="Top" Width="116" Background="#FF1753A1" Height="25" FontFamily="Arial" FontWeight="Bold" FontSize="13" Click="ExitRoom_Click"/>
+        <Label Content="Informacja z serwera"  HorizontalAlignment="Left" Margin="496,16,0,0" VerticalAlignment="Top" Width="152" Height="24" Foreground="White" FontSize="13" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox Name="ServerInfo" Text="" Focusable="False" Foreground="White" BorderBrush="Black" Background="Black" TextAlignment="Center" HorizontalAlignment="Left" Margin="482,40,0,0" VerticalAlignment="Top" Width="165" Height="37" FontSize="12" FontWeight="Bold" FontFamily="Arial" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+         ScrollViewer.VerticalScrollBarVisibility="Auto"
+         ScrollViewer.CanContentScroll="True"/>
+        <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="65" Margin="472,15,0,0" VerticalAlignment="Top" Width="184"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+C:\Users\Mike\IRC\IRC\IRC\bin\Debug\IRC.exe.config
+C:\Users\Mike\IRC\IRC\IRC\bin\Debug\IRC.exe
+C:\Users\Mike\IRC\IRC\IRC\bin\Debug\IRC.pdb
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\IRC.csprojResolveAssemblyReference.cache
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\AddRoomWindow.baml
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\MainWindow.baml
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\MenuGlowne.baml
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\AddRoomWindow.g.cs
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\MainWindow.g.cs
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\MenuGlowne.g.cs
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\App.g.cs
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\IRC_MarkupCompile.cache
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\IRC.g.resources
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\IRC.Properties.Resources.resources
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\IRC.csproj.GenerateResource.Cache
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\IRC.exe
+C:\Users\Mike\IRC\IRC\IRC\obj\Debug\IRC.pdb
